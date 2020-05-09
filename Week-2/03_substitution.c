@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         return 1;
     }
     
-    int len = strlen(argv[1]);
+    int len = strlen(argv[1]); // global variable for len of argv[1]
     
     // check if the key has 26 characters.
     if (len != 26)
@@ -54,10 +54,7 @@ int main(int argc, string argv[])
     
     // prompt user for a code to encrypt
     string code = get_string("plaintext: ");
-    
     printf("ciphertext: ");
-    
-    
     for (int i = 0; i < strlen(code); i++)
     {
         char character = code[i]; // identify the character [i] into a loop
